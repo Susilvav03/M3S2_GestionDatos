@@ -31,6 +31,7 @@ mapProducts.set("Accessories", ["Keyboard", "Mouse"])
 
 // Traverse the products object and print the name and price of each product
 
+console.group("Product list")
 for (const id in products) {
     if (validateProduct(products[id])) {
         console.log(`Product ID: ${id}, Name: ${products[id].name}, Price: $${products[id].price}`);
@@ -38,16 +39,21 @@ for (const id in products) {
         console.error(`Product with ID ${id} is invalid`);
     }
 }
+console.groupEnd()
 
 // Traverse the set and print the name of each product
+console.group("\nUnique Product Names")
 for (const product of setProducts) {
     console.log(`Unique product Name: ${product}`);
 }
+console.groupEnd()
 
 // Traverse the map and print the category and product name
+console.group("\nProducts by Category")
 mapProducts.forEach((products, category) => {
-    console.log(`Category: ${category}, Products: ${products.join(", ")}`);
+    console.log(`Category: ${category} - Products: ${products.join(", ")}`);
 })
+console.groupEnd()
 
 // Display the products in the HTML
 const container = document.getElementById('productsContainer');
