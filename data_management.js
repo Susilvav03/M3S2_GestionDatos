@@ -42,14 +42,14 @@ for (const id in products) {
 console.groupEnd()
 
 // Traverse the set and print the name of each product
-console.group("\nUnique Product Names")
+console.group("Unique Product Names")
 for (const product of setProducts) {
     console.log(`Unique product Name: ${product}`);
 }
 console.groupEnd()
 
 // Traverse the map and print the category and product name
-console.group("\nProducts by Category")
+console.group("Products by Category")
 mapProducts.forEach((products, category) => {
     console.log(`Category: ${category} - Products: ${products.join(", ")}`);
 })
