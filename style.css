@@ -1,0 +1,43 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+.container__title {
+    text-align: center;
+    color: #333;
+}
+
+.container__products {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+
+.products__card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 220px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.card__title {
+    margin: 0 0 10px;
+    color: #007acc;
+}
+
+.card__price,
+.card__category {
+    margin: 5px 0;
+}
